@@ -1,0 +1,268 @@
+/* global variables */
+* {
+    font-family: "Cairo", sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    width: 900px;
+    margin:0 auto;
+}
+:root {
+    --mainsection-background: #ececec;
+    --main-color: #2196f3;
+}
+
+/* global variables */
+header {
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+
+}
+
+div.head.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 50px;
+
+}
+div.logo {
+    align-self: center;
+
+}
+
+div.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+div.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.nav li  {
+    list-style: none;
+    height: 100%;
+    
+
+}
+div.nav li:hover {
+    background-color: #fafafa;
+    
+}
+
+div.nav li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 0 10px;
+    overflow: hidden; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+div.nav li a:hover {
+    color: var(--main-color);
+}
+div.nav li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition-duration: 1s;
+}
+
+div.nav li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+}
+div.nav li:last-child {
+    position: relative;
+}
+div.nav li:last-child:hover div.hid-menu {
+    opacity: 1;
+    bottom: -284px;
+    z-index: 100;
+
+
+
+}
+
+
+div.hid-menu {
+    position: absolute;
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    right: 0;
+    bottom: -330px;
+    opacity: 0;
+    transition: top, 1s;
+    border-bottom: 1px solid var(--main-color);
+    border-radius: 6px;
+    z-index: -3;
+    
+
+    
+    
+}
+
+div.menu-img {
+    flex-basis: 50%;
+}
+div.menu-img img {
+    width: 100%;
+}
+
+
+div.menu-items {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+div.menu2 {
+    flex-basis: 25%;
+    padding: 10px;
+}
+div.item {
+color: var(--main-color);
+font-weight: 600;
+font-size: 16px;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+flex-wrap: nowrap;
+border-bottom: 1px solid #ccc;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+div.item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background-color: var(--mainsection-background);
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.4s;
+}
+div.item:hover::after {
+    left: 0;
+}
+
+div.item p {
+    display: inline-block;
+}
+div.x {
+    background-color: var(--mainsection-background);
+    height: 500px;
+}
+/* start landing */
+div.landing{
+    position: relative;
+    height: 70vh;
+}
+div.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainsection-background);
+    top: 0;
+    left: 0;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    z-index: -2;
+}
+div.landing .container{
+    display: flex;
+    height: 100%;
+    gap: 50px;
+  
+}
+div.landing .text {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.landing .text p {
+    font-size: 23px;
+    line-height: 1.8;
+    color: #777;
+}
+div.landing div.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: img-vibrate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+div.landing img{
+    width: 400px
+}
+
+@keyframes img-vibrate {
+    0% {
+        transform: translateY(0);
+    }    
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+div.icon {
+   text-align: center;
+   color: var(--main-color);
+   animation-name: icon-shake;
+   animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+   
+}
+
+@keyframes icon-shake {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-10px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform:translateY(0)
+    }
+    
+}
+
+/* End landing */
