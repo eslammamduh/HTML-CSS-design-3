@@ -673,6 +673,170 @@ div.card.six::after {
 
 }
 
+div.member-net  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 60px;
+    
+}
+div.mem-card  {
+    background-color: var(--mainsection-background);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+}
+div.mem-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+    background-color: red;
+}
+div.mem-card.one::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-01.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.two::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-02.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.three::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-03.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.four::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-04.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.five::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-05.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.six::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-06.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.seven::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-07.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.mem-card.eight::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(/imgs/team-08.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+
+}
+div.social-icon {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    padding: 10px;
+    align-self: center;
+}
+div.social-icon a {
+    text-decoration: none;
+    color: #777;
+}
+div.social-icon i {
+    padding: 10px;
+}
+
+div.text {
+    align-self: flex-end;
+    padding: 20px;
+}
+div.text h2 {
+    margin-bottom: 5px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
 
 @keyframes img-vibrate {
     0% {
